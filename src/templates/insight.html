@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+    <title>INSIGHTUS</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="#"></i>INSIGHTUS</a
+          >
+        </div>
+        <ul class="links">
+          <li id="home">
+            <a href="/"><i class="fa fa-fw fa-home"></i>Home</a>
+          </li>
+          <li id="insight">
+            <a href="/insight.html" class="insights"><i class="fa fa-fw fa-search"></i>Insights</a>
+          </li>
+          <li id="about">
+            <a href="/about.html"><i class="fa-solid fa-address-card"></i>About</a>
+          </li>
+        </ul>
+        <a href="/" class="action_button">Get Started</a>
+        <div class="toggle_button">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li id="home">
+          <a href="/"><i class="fa fa-fw fa-home"></i>Home</a>
+        </li>
+        <li id="insight">
+          <a href="/insight.html" class="insights"><i class="fa fa-fw fa-search"></i>Insights</a>
+        </li>
+        <li id="about">
+          <a href="/about.html"><i class="fa-solid fa-address-card"></i>About</a>
+        </li>
+        <li id="action_button"><a href="/" class="action_button">Get Started</a></li>
+      </div>
+    </header>
+
+    <main>
+        <div class="insight_container">
+            <div id="insights_content", class="insight_content">
+                <h1 class="insight_content">NO DATA AVAILABLE</h1>
+            </div>
+
+            <div class="loading">
+              <div class="loader"></div>
+              <h1>LOADING STATISTICS</h1>
+            </div>
+
+            <div class="section1">
+              <h1>STATISTICS OF DATASET</h1>
+              <p id="stats-container">
+                <!-- Text will be displayed here -->
+              </p>
+            </div>
+
+            <div class="section1">
+                <h1>SKEWNESS OF DATASET</h1>
+                <p id="skew-container">
+                  <!-- Text will be displayed here -->
+                </p>
+            </div>
+
+            <div class="loading">
+              <div class="loader"></div>
+              <h1>LOADING FREQUENCY GRAPHS</h1>
+            </div>
+
+            <div class="section2">
+              <h1>FREQUENCY GRAPHS</h1>
+              <div id="graph-container1">
+                  <!-- Graph will be displayed here -->
+              </div>
+            </div>
+
+            <div class="loading">
+              <div class="loader"></div>
+              <h1>LOADING DISTRIBUTION GRAPHS</h1>
+            </div>
+
+            <div class="section3">
+              <h1>DISTRIBUTION GRAPHS</h1>
+              <div id="graph-container2">
+                  <!-- Graph will be displayed here -->
+              </div>
+            </div>
+
+            <div class="loading">
+              <div class="loader"></div>
+              <h1>REFINING DATA FOR MODEL TRAINING</h1>
+            </div>
+
+            <div class="loading">
+              <div class="loader"></div>
+              <h1>LOADING REGRESSION MODEL</h1>
+            </div>
+
+            <div class="section4">
+              <h1>REGRESSION MODEL INSIGHTS</h1>
+                <p id="text-container1">
+                  <!-- Text will be displayed here -->
+                </p>
+              <h1 id="graphs">CONFUSION MATRIX LOGISTIC REGRESSION</h1>
+              <div id="graph-container3">
+                <!-- Graph will be displayed here -->
+              </div>
+            </div>
+
+            <div class="loading">
+              <div class="loader"></div>
+              <h1>LOADING DECISION TREE CLASSIFIER MODEL</h1>
+            </div>
+
+            <div class="section5">
+              <h1>DECISION TREE MODEL INSIGHTS</h1>
+                <p id="text-container2">
+                  <!-- Text will be displayed here -->
+                </p>
+            </div>
+
+            <div class="loading">
+              <div class="loader"></div>
+              <h1>LOADING RANDOM FOREST CLASSIFIER MODEL</h1>
+            </div>
+
+            <div class="section6">
+              <h1>RANDOM FOREST MODEL INSIGHTS</h1>
+                <p id="text-container3">
+                  <!-- Text will be displayed here -->
+                </p>
+            </div>
+
+            <div class="loading">
+              <div class="loader"></div>
+              <h1>LOADING KMEANS CLUSTERING MODEL</h1>
+            </div>
+
+            <div class="section7">
+              <h1>KMEANS CLUSTERING MODEL INSIGHTS</h1>
+                <p id="text-container4">
+                  <!-- Text will be displayed here -->
+                </p>
+              <h1>SCATTER PLOTS OF KMEANS CLUSTERING</h1>
+              <div id="graph-container4">
+                <!-- Graph will be displayed here -->
+              </div>
+            </div>
+
+        </div>
+
+      <div class="notifications">
+      </div>
+    </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+  <script src="{{ url_for('static', filename='js/script2.js') }}"></script>
+  </body>
+</html>

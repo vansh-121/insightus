@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>INSIGHTUS</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="#"></i>INSIGHTUS</a
+          >
+        </div>
+        <ul class="links">
+          <li id="home">
+            <a href="/" class="home"><i class="fa fa-fw fa-home"></i>Home</a>
+          </li>
+          <li id="insight">
+            <a href="/insight.html"><i class="fa fa-fw fa-search"></i>Insights</a>
+          </li>
+          <li id="about">
+            <a href="/about.html"><i class="fa-solid fa-address-card"></i>About</a>
+          </li>
+        </ul>
+        <div class="toggle_button">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li id="home">
+          <a href="/" class="home"><i class="fa fa-fw fa-home"></i>Home</a>
+        </li>
+        <li id="insight">
+          <a href="/insight.html"><i class="fa fa-fw fa-search"></i>Insights</a>
+        </li>
+        <li id="about">
+          <a href="/about.html"><i class="fa-solid fa-address-card"></i>About</a>
+        </li>
+      </div>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <h2>READ DATASET</h2>
+          <form id="dataset_form">
+            <input type="text" id="csv_file" placeholder="Name of CSV File", accept=".csv", required>
+            <div class="button-group">
+                <input type="button" id="upload_button" value="Upload">
+                <input type="submit" id="browse_button" value="Browse File">
+            </div>
+            <input type="text" id="target_column" placeholder="Target Column", required>
+            <input type="submit" id="insights_button" value="Generate Insights">
+          </form>
+      </div>
+
+      <div class="notifications">
+      </div>
+
+    </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
