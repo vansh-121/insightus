@@ -182,7 +182,7 @@ class InsightGeneration:
                 ax.set_xlabel(f"{columns[feature1]}")
                 ax.set_ylabel(f"{columns[feature2]}")
                 ax.set_title(f"KMeans Clustering: {
-                             columns[feature1]} vs {columns[feature2]}')
+                             columns[feature1]} vs {columns[feature2]}")
                 plot_idx += 1
 
         # Hide any unused subplots
