@@ -17,21 +17,17 @@ target = None
 numeric_cols = None
 categorical_cols = None
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
-
 
 @app.route('/insight.html')
 def insight():
     return render_template('insight.html')
 
-
 @app.route('/about.html')
 def about():
     return render_template('about.html')
-
 
 @app.route('/browse_file', methods=['POST'])
 def browse_file():
@@ -44,7 +40,6 @@ def browse_file():
         return jsonify({'result': 'success', 'file_name': file_name})
     except Exception as e:
         return jsonify({'result': 'failure', 'error': 'File Not Uploaded!'})
-
 
 @app.route('/file_input', methods=['POST'])
 def process_input():
@@ -66,7 +61,6 @@ def process_input():
     except Exception as e:
         return jsonify({'result': 'failure', 'error': f'File {input_data} Not Found in Data Folder!'})
 
-
 @app.route('/get_target', methods=['POST'])
 def get_target():
     global df
@@ -85,7 +79,6 @@ def get_target():
             return jsonify({'result': 'failure', 'error': f'No Target column named {target}'})
     except Exception:
         return jsonify({'result': 'failure', 'error': 'No Dataset Uploaded!'})
-
 
 @app.route('/fill_missing_values', methods=['POST'])
 def additional_processing():
@@ -109,7 +102,6 @@ def additional_processing():
     except Exception as e:
         return jsonify({'result': 'failure', 'error': str(e)})
 
-
 @app.route('/insight.html/describe_stats', methods=['GET'])
 def describe_stats():
     try:
@@ -119,7 +111,6 @@ def describe_stats():
         return jsonify({'result': 'success', 'stats': stats, 'skew': skewness})
     except Exception as e:
         return jsonify({'result': 'failure', 'error': str(e)})
-
 
 @app.route('/insight.html/frequency_plots')
 def frequency_plots():
@@ -131,7 +122,6 @@ def frequency_plots():
     except Exception as e:
         return jsonify({'result': 'failure', 'error': str(e)})
 
-
 @app.route('/insight.html/distribution_plots')
 def distribution_plots():
     try:
@@ -141,7 +131,6 @@ def distribution_plots():
         return jsonify({'result': 'success', 'plot': plot_data})
     except Exception as e:
         return jsonify({'result': 'failure', 'error': str(e)})
-
 
 @app.route('/insight.html/data_refining')
 def data_refining():
@@ -163,7 +152,6 @@ def data_refining():
     except Exception as e:
         return jsonify({'result': 'failure', 'error': str(e)})
 
-
 @app.route('/insight.html/kmeans_insights')
 def kmeans_insights():
     try:
@@ -172,7 +160,6 @@ def kmeans_insights():
         return jsonify({'result': 'success', 'text': insights, 'plot': plot_data})
     except Exception as e:
         return jsonify({'result': 'failure', 'error': str(e)})
-
 
 @app.route('/insight.html/logistic_regression_insights')
 def logistic_regression_insights():
@@ -189,7 +176,6 @@ def logistic_regression_insights():
     except Exception as e:
         return jsonify({'result': 'failure', 'error': str(e)})
 
-
 @app.route('/insight.html/decisionTree_insights')
 def decisionTree_insights():
     try:
@@ -199,7 +185,6 @@ def decisionTree_insights():
         return jsonify({'result': 'success', 'text': insight})
     except Exception as e:
         return jsonify({'result': 'failure', 'error': str(e)})
-
 
 @app.route('/insight.html/randomForest_insights')
 def randomForest_insights():
@@ -211,7 +196,6 @@ def randomForest_insights():
     except Exception as e:
         return jsonify({'result': 'failure', 'error': str(e)})
 
-
 @app.route('/insight.html/linear_regression_insights')
 def linear_regression_insights():
     try:
@@ -221,7 +205,6 @@ def linear_regression_insights():
         return jsonify({'result': 'success', 'text': insight})
     except Exception as e:
         return jsonify({'result': 'failure', 'error': str(e)})
-
 
 if __name__ == '__main__':
     app.run(debug=True)
